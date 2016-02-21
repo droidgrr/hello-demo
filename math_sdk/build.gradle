@@ -26,18 +26,22 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
 }
 
-android.libraryVariants.all { variant ->
-    def name = variant.buildType.name
-    if (name.equals(com.android.builder.core.BuilderConstants.DEBUG)) {
-        return; // Skip debug builds.
-    }
-
-    def distJarTask = task("jar${variant.name.capitalize()}", type: Jar, dependsOn: variant.javaCompile) {
-        from variant.javaCompile.destinationDir
-        exclude '**/BuildConfig.class'
-        exclude '**/R.class'
-        exclude '**/R$*.class'
-    }
-    artifacts.add('archives', distJarTask)
-
-}
+// Adding this jar task to public repo was a bad idea, it builds and publishes the jar in addition
+// to arr, resulting in build failures like the following
+// WARNING: Module 'com.github.droidgrr:hello-demo:v101.3' depends on one or more Android Libraries but is a jar
+//
+//android.libraryVariants.all { variant ->
+//    def name = variant.buildType.name
+//    if (name.equals(com.android.builder.core.BuilderConstants.DEBUG)) {
+//        return; // Skip debug builds.
+//    }
+//
+//    def distJarTask = task("jar${variant.name.capitalize()}", type: Jar, dependsOn: variant.javaCompile) {
+//        from variant.javaCompile.destinationDir
+//        exclude '**/BuildConfig.class'
+//        exclude '**/R.class'
+//        exclude '**/R$*.class'
+//    }
+//    artifacts.add('archives', distJarTask)
+//
+//}
