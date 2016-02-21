@@ -26,3 +26,18 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
 }
 
+android.libraryVariants.all { variant ->
+    def name = variant.buildType.name
+    if (name.equals(com.android.builder.core.BuilderConstants.DEBUG)) {
+        return; // Skip debug builds.
+    }
+
+    def distJarTask = task("jar${variant.name.capitalize()}", type: Jar, dependsOn: variant.javaCompile) {
+        from variant.javaCompile.destinationDir
+        exclude '**/BuildConfig.class'
+        exclude '**/R.class'
+        exclude '**/R$*.class'
+    }
+    artifacts.add('archives', distJarTask)
+
+}
