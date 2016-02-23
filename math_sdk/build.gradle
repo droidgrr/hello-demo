@@ -7,10 +7,10 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 10
         targetSdkVersion 23
-        versionCode 101
-        versionName "101.0"
+        versionCode 093
+        versionName "0.9.3"
     }
     buildTypes {
         release {
@@ -20,28 +20,12 @@ android {
     }
 }
 
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.google.android.gms:play-services-gcm:7.8.0'
+    //Optional Dependency, for Custom Font Support
+    compile 'uk.co.chrisjenx:calligraphy:2.1.0'
 }
-
-// Adding this jar task to public repo was a bad idea, it builds and publishes the jar in addition
-// to arr, resulting in build failures like the following
-// WARNING: Module 'com.github.droidgrr:hello-demo:v101.3' depends on one or more Android Libraries but is a jar
-//
-//android.libraryVariants.all { variant ->
-//    def name = variant.buildType.name
-//    if (name.equals(com.android.builder.core.BuilderConstants.DEBUG)) {
-//        return; // Skip debug builds.
-//    }
-//
-//    def distJarTask = task("jar${variant.name.capitalize()}", type: Jar, dependsOn: variant.javaCompile) {
-//        from variant.javaCompile.destinationDir
-//        exclude '**/BuildConfig.class'
-//        exclude '**/R.class'
-//        exclude '**/R$*.class'
-//    }
-//    artifacts.add('archives', distJarTask)
-//
-//}
