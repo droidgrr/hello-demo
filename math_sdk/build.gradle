@@ -9,7 +9,7 @@ android {
     defaultConfig {
         minSdkVersion 10
         targetSdkVersion 23
-        versionCode 093
+        versionCode 993
         versionName "0.9.3"
     }
     buildTypes {
