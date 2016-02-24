@@ -14,14 +14,12 @@
         android:paddingLeft="8dp"
         android:paddingRight="8dp" />
 
-    <TextView
+    <include
         android:id="@+id/empty"
+        layout="@layout/hotline_partial_article_list_empty_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/hotline_article_list_empty_message"
         android:layout_above="@+id/hotline_contact_us_group"
-        android:textAppearance="?attr/hotlineArticleListEmptyWarningTextAppearance"
         android:visibility="gone" />
 
     <android.support.v4.widget.ContentLoadingProgressBar

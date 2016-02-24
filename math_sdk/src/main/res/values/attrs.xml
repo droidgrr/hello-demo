@@ -42,6 +42,7 @@
     <!-- Text Appearance Customizations - Solution Article Category -->
     <attr name="hotlineCategoryNameTextAppearance" format="reference" />
     <attr name="hotlineCategoryDescriptionTextAppearance" format="reference" />
+    <attr name="hotlineCategoryListEmptyWarningTextAppearance" format="reference" />
 
     <!-- Text Appearance Customizations - Message Channels -->
     <attr name="hotlineChannelNameTextAppearance" format="reference" />

@@ -45,6 +45,7 @@
         <item name="hotlineArticleListEmptyWarningTextAppearance">@style/hotlineArticleListEmptyWarningTextAppearance</item>
         <item name="hotlineCategoryNameTextAppearance">@style/hotlineCategoryNameTextAppearance</item>
         <item name="hotlineCategoryDescriptionTextAppearance">@style/hotlineCategoryDescriptionTextAppearance</item>
+        <item name="hotlineCategoryListEmptyWarningTextAppearance">@style/hotlineCategoryListEmptyWarningTextAppearance</item>
         <item name="hotlineChannelNameTextAppearance">@style/hotlineChannelNameTextAppearance</item>
         <item name="hotlineChannelDescriptionTextAppearance">@style/hotlineChannelDescriptionTextAppearance</item>
         <item name="hotlineChannelLastUpdatedTextAppearance">@style/hotlineChannelLastUpdatedTextAppearance</item>
