@@ -18,3 +18,12 @@
 
 -keep class com.freshdesk.hotline.** { *; }
 -keep class com.demach.konotor.** { *; }
+
+# Proguard config for GSON
+# Ref : https://google-gson.googlecode.com/svn/trunk/examples/android-proguard-example/proguard.cfg
+# Gson uses generic type information stored in a class file when working with fields. Proguard
+# removes such information by default, so configure it to keep all of it.
+-keepattributes Signature
+
+# Gson specific classes
+-keep class sun.misc.Unsafe { *; }
