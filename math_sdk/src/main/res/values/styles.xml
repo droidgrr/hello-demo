@@ -20,6 +20,7 @@
         <item name="android:dividerHeight">@dimen/hotline_message_lisitem_divider_height</item>
         <item name="android:stackFromBottom">true</item>
         <item name="android:transcriptMode">alwaysScroll</item>
+        <item name="android:paddingBottom">8dp</item>
     </style>
 
     <style name="Widget.Hotline.MessageListItem">
