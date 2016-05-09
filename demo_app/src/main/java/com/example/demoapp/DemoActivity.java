@@ -12,7 +12,6 @@ public class DemoActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo);
-        //int c = HelloMath.sum(12, 24);
 
         findViewById(R.id.root).setOnClickListener(new View.OnClickListener() {
             @Override
