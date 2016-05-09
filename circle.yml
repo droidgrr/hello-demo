@@ -1,0 +1,8 @@
+general:
+  branches:
+    ignore:
+      - gh-pages # list of branches to ignore
+test:
+  override:
+    - ./gradlew assembleRelease -PdisablePreDex
+    - cp -r demo_app/build/outputs $CIRCLE_ARTIFACTS
